@@ -11,7 +11,7 @@ class Puppet::Run
   attr_reader :status, :background, :options
 
   def agent
-    Puppet::Agent.new(Puppet::Configurer)
+    Puppet::Agent.new(Puppet::Configurer, true)
   end
 
   def background?

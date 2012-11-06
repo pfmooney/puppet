@@ -13,7 +13,7 @@ class Puppet::Agent
   attr_reader :client_class, :client, :splayed, :should_fork
 
   # Just so we can specify that we are "the" instance.
-  def initialize(client_class, should_fork)
+  def initialize(client_class, should_fork=true)
     @splayed = false
 
     @should_fork = should_fork

@@ -20,7 +20,7 @@ describe Puppet::Daemon, :unless => Puppet.features.microsoft_windows? do
   include PuppetSpec::Files
 
   before do
-	# Forking agent not needed here
+    # Forking agent not needed here
     @agent = Puppet::Agent.new(TestClient.new, false)
     @daemon = Puppet::Daemon.new
     @daemon.stubs(:close_streams).returns nil

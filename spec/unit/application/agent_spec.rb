@@ -510,12 +510,12 @@ describe Puppet::Application::Agent do
     end
 
     describe "when configuring agent for catalog run" do
-	  it "should set should_fork as true when running normally" do
+      it "should set should_fork as true when running normally" do
         Puppet::Agent.expects(:new).with(anything, true)
         @puppetd.setup
       end
 
-	  it "should not set should_fork as false for --onetime" do
+      it "should not set should_fork as false for --onetime" do
         Puppet[:onetime] = true
         Puppet::Agent.expects(:new).with(anything, false)
         @puppetd.setup
